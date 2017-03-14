@@ -6,6 +6,7 @@ Created on Tue Mar 14 17:25:31 2017
 """
 
 from sklearn import tree
+from sklearn.neighbors import  KNeighborsClassifier
 
 clf = tree.DecisionTreeClassifier()
 
@@ -24,5 +25,15 @@ clf = clf.fit(X, Y)
 prediction = clf.predict([[190, 70, 43]])
 
 # CHALLENGE compare their reusults and print the best one!
+
+print(prediction)
+
+
+#Classifier 2
+clf =  KNeighborsClassifier(3)
+
+clf = clf.fit(X, Y)
+
+prediction = clf.predict([[160,55,37]])
 
 print(prediction)
